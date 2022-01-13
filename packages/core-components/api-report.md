@@ -36,6 +36,7 @@ import { default as React_2 } from 'react';
 import * as React_3 from 'react';
 import { ReactElement } from 'react';
 import { ReactNode } from 'react';
+import { RefObject } from 'react';
 import { SessionApi } from '@backstage/core-plugin-api';
 import { SignInPageProps } from '@backstage/core-plugin-api';
 import { SignInResult } from '@backstage/core-plugin-api';
@@ -393,6 +394,7 @@ export type GaugeProps = {
   inverse?: boolean;
   unit?: string;
   max?: number;
+  hoverMessage?: ReactNode;
   getColor?: GaugePropsGetColor;
 };
 
@@ -904,7 +906,6 @@ export const SidebarDivider: React_2.ComponentType<
     | 'translate'
     | 'prefix'
     | 'children'
-    | 'id'
     | 'defaultChecked'
     | 'defaultValue'
     | 'suppressContentEditableWarning'
@@ -913,6 +914,7 @@ export const SidebarDivider: React_2.ComponentType<
     | 'contentEditable'
     | 'contextMenu'
     | 'draggable'
+    | 'id'
     | 'lang'
     | 'placeholder'
     | 'spellCheck'
@@ -1242,7 +1244,6 @@ export const SidebarScrollWrapper: React_2.ComponentType<
     | 'translate'
     | 'prefix'
     | 'children'
-    | 'id'
     | 'defaultChecked'
     | 'defaultValue'
     | 'suppressContentEditableWarning'
@@ -1251,6 +1252,7 @@ export const SidebarScrollWrapper: React_2.ComponentType<
     | 'contentEditable'
     | 'contextMenu'
     | 'draggable'
+    | 'id'
     | 'lang'
     | 'placeholder'
     | 'spellCheck'
@@ -1517,7 +1519,6 @@ export const SidebarSpace: React_2.ComponentType<
     | 'translate'
     | 'prefix'
     | 'children'
-    | 'id'
     | 'defaultChecked'
     | 'defaultValue'
     | 'suppressContentEditableWarning'
@@ -1526,6 +1527,7 @@ export const SidebarSpace: React_2.ComponentType<
     | 'contentEditable'
     | 'contextMenu'
     | 'draggable'
+    | 'id'
     | 'lang'
     | 'placeholder'
     | 'spellCheck'
@@ -1791,7 +1793,6 @@ export const SidebarSpacer: React_2.ComponentType<
     | 'translate'
     | 'prefix'
     | 'children'
-    | 'id'
     | 'defaultChecked'
     | 'defaultValue'
     | 'suppressContentEditableWarning'
@@ -1800,6 +1801,7 @@ export const SidebarSpacer: React_2.ComponentType<
     | 'contentEditable'
     | 'contextMenu'
     | 'draggable'
+    | 'id'
     | 'lang'
     | 'placeholder'
     | 'spellCheck'
@@ -2367,6 +2369,11 @@ export function TrendLine(
       title?: string;
     },
 ): JSX.Element | null;
+
+// Warning: (ae-missing-release-tag) "useHover" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
+//
+// @public (undocumented)
+export const useHover: (ref: RefObject<HTMLInputElement>) => boolean;
 
 // Warning: (ae-forgotten-export) The symbol "SetQueryParams" needs to be exported by the entry point index.d.ts
 // Warning: (ae-missing-release-tag) "useQueryParamState" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
